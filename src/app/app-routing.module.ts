@@ -6,19 +6,14 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    pathMatch: 'full',
   },
   {
-    path: '/home',
+    path: 'home',
     component: HomeComponent,
-    pathMatch: 'full',
   },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
